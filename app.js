@@ -91,33 +91,6 @@ function mostrarError(mensaje) {
 	}
 }
 
-//envía el email
-//animación envío de email
-function enviarEmail(e) {
-	e.preventDefault();
-
-	//mostrar spinner
-	const spinner = document.querySelector("#spinner");
-	spinner.style.display = "flex";
-
-	//después de 3 segundos ocultar el spinner y mostrar
-	setTimeout(() => {
-		spinner.style.display = "none";
-		console.log("esta función se ejecuta después de 3 segundos");
-
-		//mensaje de envío de correo
-		const parrafo = document.createElement("p");
-		parrafo.textContent = "El correo se envió correctamente";
-		parrafo.classList.add(
-			"text-center",
-			"my-10",
-			"p-5",
-			"bg-green-500",
-			"text-white"
-		);
-	}, 3000);
-}
-
 //resetear formulario
 function resetearFormulario() {
 	formulario.reset();
